@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Scrollspy from 'react-scrollspy';
-
+import gulpy from './../../../../public/icons/gulpy_text.png'
 import { Container } from '@components/global';
 import {
   Nav,
@@ -15,7 +15,7 @@ import {
 
 import { ReactComponent as MenuIcon } from '@static/icons/menu.svg';
 
-const NAV_ITEMS = ['About', 'Our Mission', 'Team', 'FAQ'];
+const NAV_ITEMS = ['About', 'Mission', 'Team', 'FAQ'];
 
 class Navbar extends Component {
   state = {
@@ -59,7 +59,9 @@ class Navbar extends Component {
     return (
       <Nav {...this.props}>
         <StyledContainer>
-          <Brand>Gulp</Brand>
+          <Brand>
+          <img src={gulpy} width="25%" />
+          </Brand>
           <Mobile>
             <button onClick={this.toggleMobileMenu} style={{ color: 'black' }}>
               <MenuIcon />

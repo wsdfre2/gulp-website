@@ -54,11 +54,7 @@ const Footer = () => (
             <Copyright>
               <h2>Gulp Inc.</h2>
               <span>
-                Illustrations by
-                {` `}
-                <ExternalLink href="https://twitter.com/diana_valeanu">
-                  @diana_valeanu
-                </ExternalLink>
+                hello@gulpsf.com
               </span>
             </Copyright>
             <SocialIcons>

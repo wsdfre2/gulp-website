@@ -23,7 +23,7 @@ const UsedBy = () => (
       }
     `}
     render={data => (
-      <Section id="our mission" accent>
+      <Section id="mission" accent>
         <StyledContainer>
           <div>
             <h1>Our Mission:</h1>

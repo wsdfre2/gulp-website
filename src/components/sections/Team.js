@@ -8,18 +8,21 @@ import { Section, Container } from '@components/global';
 const TEAM = [
   {
     name: 'Kirk Kim',
-    image: 'josh.jpg',
+    image: 'lisa.jpg',
     role: 'Chief Executive Officer',
+    linkedin: 'https://linkedin.com/in/kirkkimjr',
   },
   {
     name: 'Young Cha',
-    image: 'lisa.jpg',
-    role: 'Cheif Technology Officer',
+    image: 'young.jpg',
+    role: 'Chief Technology Officer',
+    linkedin: 'https://linkedin.com/in/youngc0905',
   },
   {
     name: 'Gene J. Kim',
-    image: 'ashlyn.jpg',
-    role: 'Cheif Financial Officer',
+    image: 'gene.jpeg',
+    role: 'Chief Financial Officer',
+    linkedin: 'https://linkedin.com/in/gene-jy-kim',
   },
 ];
 
@@ -56,7 +59,7 @@ const Team = () => (
         <Container style={{ position: 'relative' }}>
           <h1>The Team</h1>
           <TeamGrid>
-            {TEAM.map(({ name, image, role }) => {
+            {TEAM.map(({ name, image, role, linkedin }) => {
               const img = data.allFile.edges.find(
                 ({ node }) => node.relativePath === image
               ).node;
@@ -64,7 +67,11 @@ const Team = () => (
               return (
                 <div key={name}>
                   <Img fluid={img.childImageSharp.fluid} alt={name} />
-                  <Title>{name}</Title>
+                  <Title>
+                    <a href={linkedin}>
+                      {name}
+                    </a>
+                  </Title>
                   <Subtitle>{role}</Subtitle>
                 </div>
               );
