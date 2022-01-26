@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-
+import apple from './../../../public/icons/apple.svg'
+import google from './../../../public/icons/google.png'
 import { Container } from '@components/global';
 import ExternalLink from '@common/ExternalLink';
 
@@ -10,9 +11,9 @@ const Header = () => (
   <StaticQuery
     query={graphql`
       query {
-        art_build: file(
+        art_gulpscreen2: file(
           sourceInstanceName: { eq: "art" }
-          name: { eq: "build" }
+          name: { eq: "gulpscreen2" }
         ) {
           childImageSharp {
             fluid(maxWidth: 1400) {
@@ -27,20 +28,28 @@ const Header = () => (
         <Container>
           <Grid>
             <Art>
-              <Img fluid={data.art_build.childImageSharp.fluid} />
+              <Img 
+                fluid={data.art_gulpscreen2.childImageSharp.fluid}
+                style={{ width: "75%", top: -0, left: 120,}} 
+              />
             </Art>
             <Text>
               <h1>
-                Find your
-                <br />
-                happiest hour.
+                <span class = "black">
+                <em>Find your </em>
+                <span class="highlight"><em> happiest</em></span> <em>hour.</em>
+                </span>
               </h1>
               <br />
-              <p>
-                <StyledExternalLink href="https://gulpsf.com">
-                  Download App &nbsp;&#x2794;
-                </StyledExternalLink>
-              </p>
+              <h3>
+                We're building a happy hour directory:
+                <br />
+                For users & vendors alike
+              </h3>
+              <br />
+              <br />
+              <img src={apple} width="21%" margin_right="5px"/>
+              <img src={google} width="23.5%" />
             </Text>
           </Grid>
         </Container>
@@ -50,11 +59,13 @@ const Header = () => (
 );
 
 const HeaderWrapper = styled.header`
-  background-color: ${props => props.theme.color.primary};
-  padding-top: 96px;
+  background-color: ${props => props.theme.color.white.regular};
+  padding-top: 100px;
+  padding-bottom: 100px;
 
   @media (max-width: ${props => props.theme.screen.md}) {
     padding-top: 128px;
+    padding-bottom: 128px;
   }
 `;
 
@@ -64,7 +75,7 @@ const Art = styled.figure`
 
   > div {
     width: 120%;
-    margin-bottom: -4.5%;
+    margin-bottom: -14.5%;
 
     @media (max-width: ${props => props.theme.screen.md}) {
       width: 100%;

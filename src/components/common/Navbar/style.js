@@ -4,7 +4,7 @@ import { Container } from '@components/global';
 
 export const Nav = styled.nav`
   padding: 16px 0;
-  background-color: ${props => props.theme.color.primary};
+  background-color: ${props => props.theme.color.white.regular};
   position: fixed;
   width: 100%;
   top: 0;
@@ -41,7 +41,7 @@ export const NavListWrapper = styled.div`
 
 export const NavItem = styled.li`
   margin: 0 0.75em;
-  font-family: ${props => props.theme.font.secondary};
+  font-family: ${props => props.theme.font.primary};
   ${props => props.theme.font_size.small};
 
   a {
@@ -53,6 +53,7 @@ export const NavItem = styled.li`
   &.active {
     a {
       opacity: 1;
+      color: ${props => props.theme.color.orange};
     }
   }
 `;

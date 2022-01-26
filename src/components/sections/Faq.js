@@ -7,7 +7,7 @@ import ExternalLink from '@common/ExternalLink';
 
 const FAQS = [
   {
-    title: 'Question 1?',
+    title: 'Hi?',
     content: () => (
       <>
         Answer goes here.
@@ -15,7 +15,7 @@ const FAQS = [
     ),
   },
   {
-    title: 'Question 2?',
+    title: 'Question 2?Question 2?Question 2?Question 2?Question 2?Question 2?Question 2?Question 2?Question 2?Question 2?Question 2?Question 2?Question 2?Question 2?Question 2?Question 2?Question 2?',
     content: () => (
       <>
         Answer goes here.

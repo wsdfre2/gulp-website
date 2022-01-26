@@ -48,7 +48,7 @@ const About = () => (
         <Container>
           <Grid>
             <div>
-              <h2>Discover your neighborhood</h2>
+              <h2>Discover your neighborhood!</h2>
               <p>
                 Check out what kind of deals are being offered near you! 
                 Discover new places in your neighborhood to dine and drink.
@@ -63,7 +63,7 @@ const About = () => (
               <Img fluid={data.art_learn.childImageSharp.fluid} />
             </Art>
             <div>
-              <h2>Never miss a happy hour</h2>
+              <h2><em>Never miss a happy hour!</em></h2>
               <p>
               It’s hard to keep track of every Taco Tuesdays, 
               Wine Wednesdays and individual promotions that are going around in your city! 
@@ -73,15 +73,11 @@ const About = () => (
           </Grid>
           <Grid>
             <div>
-              <h2>Explore Gulp!</h2>
+              <h2><em>Help reduce food waste!</em></h2>
               <p>
                 Gulp is coming soon to San Francisco and your favorite cities to help promote a culture where vendors 
                 can more directly communicate with the customers allowing them to be more flexible in pushing various 
-                promotions and happy hours based upon their need and item availability. 
-                <br></br>
-                <br></br>
-                We aim to connect users with the establishments in their city giving them a chance to explore 
-                new venues and re-discover old favorites while making sure that our users are getting the best deals.
+                promotions and happy hours based upon their need and item availability.
               </p>
             </div>
             <Art>

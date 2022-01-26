@@ -8,19 +8,19 @@ import { Section, Container } from '@components/global';
 const TEAM = [
   {
     name: 'Kirk Kim',
-    image: 'lisa.jpg',
+    image: 'Kirk.jpg',
     role: 'Chief Executive Officer',
     linkedin: 'https://linkedin.com/in/kirkkimjr',
   },
   {
     name: 'Young Cha',
-    image: 'young.jpg',
+    image: 'Young.jpg',
     role: 'Chief Technology Officer',
     linkedin: 'https://linkedin.com/in/youngc0905',
   },
   {
     name: 'Gene J. Kim',
-    image: 'gene.jpeg',
+    image: 'Gene.jpeg',
     role: 'Chief Financial Officer',
     linkedin: 'https://linkedin.com/in/gene-jy-kim',
   },
@@ -55,9 +55,9 @@ const Team = () => (
       }
     `}
     render={data => (
-      <Section id="team" accent="secondary">
+      <Section id="team" accent="primary">
         <Container style={{ position: 'relative' }}>
-          <h1>The Team</h1>
+          <h1>Meet The Team</h1>
           <TeamGrid>
             {TEAM.map(({ name, image, role, linkedin }) => {
               const img = data.allFile.edges.find(
@@ -78,7 +78,10 @@ const Team = () => (
             })}
           </TeamGrid>
           <Art>
-            <Img fluid={data.art_team.childImageSharp.fluid} />
+            <Img 
+              fluid={data.art_team.childImageSharp.fluid} 
+              style={{ width:'70%', top:150, opacity:'70%'}}
+            />
           </Art>
           <ArtMobile>
             <Img fluid={data.art_team.childImageSharp.fluid} />
@@ -113,11 +116,11 @@ const TeamGrid = styled.div`
 `;
 
 const Art = styled.figure`
-  width: 800px;
-  margin: -80px 0;
+  width: 1000px;
+  margin: -240px 0;
   position: absolute;
   top: 0;
-  left: 70%;
+  left: 60%;
 
   @media (max-width: ${props => props.theme.screen.lg}) {
     top: 20%;

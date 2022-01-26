@@ -2,27 +2,32 @@ import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-
+import gulpy from './../../../public/icons/gulpy.png'
 import { Container } from '@components/global';
 import ExternalLink from '@common/ExternalLink';
 
-import GithubIcon from '@static/icons/github.svg';
+import LinkedInIcon from '@static/icons/linkedin.svg';
 import InstagramIcon from '@static/icons/instagram.svg';
 import TwitterIcon from '@static/icons/twitter.svg';
+import FacebookIcon from '@static/icons/facebook.svg';
 
 const SOCIAL = [
   {
-    icon: GithubIcon,
-    link: 'https://github.com/ajayns/gatsby-absurd',
+    icon: LinkedInIcon,
+    link: 'https://www.linkedin.com/company/gulpsf',
   },
   {
     icon: InstagramIcon,
-    link: 'https://instagram.com/ajay_ns',
+    link: 'https://instagram.com',
   },
   {
     icon: TwitterIcon,
-    link: 'https://twitter.com/ajayns08',
+    link: 'https://twitter.com',
   },
+  {
+    icon: FacebookIcon,
+    link: 'https://facebook.com'
+  }
 ];
 
 const Footer = () => (
@@ -52,8 +57,9 @@ const Footer = () => (
         <FooterWrapper>
           <StyledContainer>
             <Copyright>
-              <h2>Gulp Inc.</h2>
-              <span>
+              <img src={gulpy} width="17%" ></img>
+              <br></br>
+              <span >
                 hello@gulpsf.com
               </span>
             </Copyright>
@@ -87,7 +93,7 @@ const SocialIcons = styled.div`
 
 const FooterWrapper = styled.footer`
   background-color: ${props => props.theme.color.primary};
-  padding: 32px 0;
+  padding: 16px 0;
 `;
 
 const Copyright = styled.div`
